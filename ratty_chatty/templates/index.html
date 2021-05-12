@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>HELLO</h1>
+  </body>
+  <script src="{{url_for('static', filename='libs/socket.io/4.0.1/socket.io.js')}}"></script>
+  <script type="text/javascript" charset="utf-8">
+    var socket = io();
+    socket.on('connect', function() {
+      socket.emit('message', {data: 'I\'m connected!'});
+    });
+  </script>
+</html>
